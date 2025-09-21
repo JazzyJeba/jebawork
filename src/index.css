@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Portfolio Design System - Sage Green Theme
+/* Portfolio Design System - Aesthetic Pink Theme
 All colors MUST be HSL. Inspired by modern portfolio aesthetics.
 */
 
@@ -19,20 +19,20 @@ All colors MUST be HSL. Inspired by modern portfolio aesthetics.
     --popover: 0 0% 100%;
     --popover-foreground: 180 8% 15%;
 
-    /* Primary - Sage green */
-    --primary: 100 15% 45%;
+    /* Primary - Aesthetic pink */
+    --primary: 340 45% 65%;
     --primary-foreground: 0 0% 98%;
 
-    /* Secondary - Light sage */
-    --secondary: 100 20% 90%;
+    /* Secondary - Light pink */
+    --secondary: 340 30% 90%;
     --secondary-foreground: 180 8% 15%;
 
     /* Muted colors */
-    --muted: 100 20% 95%;
+    --muted: 340 25% 95%;
     --muted-foreground: 180 6% 45%;
 
-    /* Accent - Darker sage */
-    --accent: 100 25% 35%;
+    /* Accent - Darker pink */
+    --accent: 340 50% 55%;
     --accent-foreground: 0 0% 98%;
 
     /* Destructive remains the same */
@@ -40,21 +40,21 @@ All colors MUST be HSL. Inspired by modern portfolio aesthetics.
     --destructive-foreground: 210 40% 98%;
 
     /* Borders and inputs */
-    --border: 100 15% 85%;
-    --input: 100 15% 90%;
-    --ring: 100 15% 45%;
+    --border: 340 20% 85%;
+    --input: 340 15% 90%;
+    --ring: 340 45% 65%;
 
-    /* Custom portfolio colors */
-    --sage-50: 100 25% 97%;
-    --sage-100: 100 20% 92%;
-    --sage-200: 100 18% 85%;
-    --sage-300: 100 16% 75%;
-    --sage-400: 100 15% 65%;
-    --sage-500: 100 15% 45%;
-    --sage-600: 100 20% 35%;
-    --sage-700: 100 25% 25%;
-    --sage-800: 100 30% 18%;
-    --sage-900: 100 35% 12%;
+    /* Custom portfolio colors - Pink theme */
+    --sage-50: 340 40% 97%;
+    --sage-100: 340 35% 92%;
+    --sage-200: 340 30% 85%;
+    --sage-300: 340 25% 75%;
+    --sage-400: 340 35% 65%;
+    --sage-500: 340 45% 55%;
+    --sage-600: 340 50% 45%;
+    --sage-700: 340 55% 35%;
+    --sage-800: 340 60% 25%;
+    --sage-900: 340 65% 15%;
 
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--sage-500)), hsl(var(--sage-600)));

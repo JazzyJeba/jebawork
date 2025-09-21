@@ -30,19 +30,21 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
+      // Initialize EmailJS with public key
+      emailjs.init("wrbnFF1JUqBWEfqdw");
+
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
-        to_email: "jebapriyaa30@gmail.com",
+        to_name: "Jeba Priya",
         reply_to: formData.email,
       };
 
       await emailjs.send(
         "service_yjsu88i",
         "template_fcdx0t4",
-        templateParams,
-        "wrbnFF1JUqBWEfqdw"
+        templateParams
       );
 
       toast({

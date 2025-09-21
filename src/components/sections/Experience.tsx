@@ -2,6 +2,7 @@ import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Building2, Calendar, MapPin, Target, TrendingUp, Users, BarChart3, Award } from "lucide-react";
+import experienceIllustration from "@/assets/experience-illustration.jpg";
 
 const Experience = () => {
   const responsibilities = [
@@ -51,6 +52,15 @@ const Experience = () => {
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Hands-on experience bridging digital marketing, data analysis, and technology management
             </p>
+          </div>
+
+          {/* Experience Image */}
+          <div className="mb-12">
+            <img 
+              src={experienceIllustration} 
+              alt="Professional experience illustration" 
+              className="w-full h-64 object-cover rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500 mx-auto"
+            />
           </div>
 
           {/* Experience Timeline */}

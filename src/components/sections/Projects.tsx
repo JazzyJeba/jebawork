@@ -52,7 +52,7 @@ const Projects = () => {
         "Mobile-responsive design"
       ],
       type: "Web Development",
-      status: "Deployed",
+      status: "Completed",
       impact: "Technical Skills"
     },
     {
@@ -224,21 +224,11 @@ const Projects = () => {
                       <Button 
                         variant="outline" 
                         size="sm"
-                        className="flex-1 group-hover:bg-gradient-primary group-hover:text-primary-foreground group-hover:border-transparent transition-all duration-300"
+                        className="w-full group-hover:bg-gradient-primary group-hover:text-primary-foreground group-hover:border-transparent transition-all duration-300"
                       >
                         <ExternalLink className="h-4 w-4 mr-2" />
                         View Details
                       </Button>
-                      {project.title !== "Custom Audience Segment Management" && (
-                        <Button 
-                          variant="ghost" 
-                          size="sm"
-                          className="flex-1 hover:bg-sage-100"
-                        >
-                          <Github className="h-4 w-4 mr-2" />
-                          Code
-                        </Button>
-                      )}
                     </div>
                   </div>
                 </CardContent>

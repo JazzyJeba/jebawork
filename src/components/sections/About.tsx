@@ -2,6 +2,7 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, Heart, Coffee, Lightbulb, Award, Users, Target } from "lucide-react";
+import aboutIllustration from "@/assets/about-illustration.jpg";
 
 const About = () => {
   const interests = [
@@ -45,6 +46,14 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
             {/* Bio Content */}
             <div className="space-y-8">
+              {/* About Image */}
+              <div className="lg:hidden mb-8">
+                <img 
+                  src={aboutIllustration} 
+                  alt="About me illustration" 
+                  className="w-full h-64 object-cover rounded-2xl shadow-xl"
+                />
+              </div>
               <Card className="bg-white/70 backdrop-blur-md border-sage-200 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
                 <CardContent className="p-8">
                   <h3 className="font-heading text-2xl font-semibold text-foreground mb-6 flex items-center">
@@ -95,6 +104,14 @@ const About = () => {
 
             {/* Interests & Achievements */}
             <div className="space-y-8">
+              {/* About Image - Desktop */}
+              <div className="hidden lg:block mb-8">
+                <img 
+                  src={aboutIllustration} 
+                  alt="About me illustration" 
+                  className="w-full h-80 object-cover rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500"
+                />
+              </div>
               {/* Interests */}
               <div>
                 <h3 className="font-heading text-2xl font-semibold text-foreground mb-6 flex items-center">

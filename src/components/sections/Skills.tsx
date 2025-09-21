@@ -13,6 +13,7 @@ import {
   TrendingUp,
   Star
 } from "lucide-react";
+import skillsIllustration from "@/assets/skills-illustration.jpg";
 
 const Skills = () => {
   const [activeCategory, setActiveCategory] = useState(0);
@@ -100,6 +101,15 @@ const Skills = () => {
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               A comprehensive blend of technical, analytical, and creative capabilities
             </p>
+          </div>
+
+          {/* Skills Image */}
+          <div className="mb-12">
+            <img 
+              src={skillsIllustration} 
+              alt="Skills and expertise illustration" 
+              className="w-full h-64 object-cover rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500 mx-auto"
+            />
           </div>
 
           {/* Top Skills Highlight */}

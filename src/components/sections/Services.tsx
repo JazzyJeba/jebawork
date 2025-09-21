@@ -14,6 +14,7 @@ import {
   Star,
   CheckCircle
 } from "lucide-react";
+import servicesIllustration from "@/assets/services-illustration.jpg";
 
 const Services = () => {
   const services = [
@@ -108,6 +109,15 @@ const Services = () => {
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Leveraging academic knowledge and practical experience to deliver valuable solutions
             </p>
+          </div>
+
+          {/* Services Image */}
+          <div className="mb-12">
+            <img 
+              src={servicesIllustration} 
+              alt="Services illustration" 
+              className="w-full h-64 object-cover rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500 mx-auto"
+            />
           </div>
 
           {/* Services Grid */}
