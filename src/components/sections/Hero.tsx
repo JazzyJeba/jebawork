@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowDown, Download, Mail, MapPin, Calendar, Star } from "lucide-react";
-import profileImage from "@/assets/jeba-profile.jpg";
+import profileImage from "@/assets/jeba-profile-professional.jpg";
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -102,7 +102,7 @@ const Hero = () => {
                 <CardContent className="p-8">
                   {/* Profile Image */}
                   <div className="relative mb-6">
-                    <div className="w-48 h-48 mx-auto rounded-2xl overflow-hidden shadow-xl ring-4 ring-sage-200 group-hover:ring-sage-300 transition-all duration-300">
+                    <div className="w-48 h-48 mx-auto rounded-full overflow-hidden shadow-xl ring-4 ring-sage-200 group-hover:ring-sage-300 transition-all duration-300">
                       <img
                         src={profileImage}
                         alt="Jeba Priya a/p Gnanapregasam"
