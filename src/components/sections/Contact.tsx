@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -11,7 +12,8 @@ import {
   Linkedin, 
   Send,
   MapPin,
-  MessageCircle
+  MessageCircle,
+  Loader2
 } from "lucide-react";
 
 const Contact = () => {
@@ -21,17 +23,45 @@ const Contact = () => {
     email: "",
     message: ""
   });
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to a server
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon!",
-    });
-    
-    // Reset form
-    setFormData({ name: "", email: "", message: "" });
+    setIsLoading(true);
+
+    try {
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_email: "jebapriyaa30@gmail.com",
+        reply_to: formData.email,
+      };
+
+      await emailjs.send(
+        "service_yjsu88i",
+        "template_fcdx0t4",
+        templateParams,
+        "wrbnFF1JUqBWEfqdw"
+      );
+
+      toast({
+        title: "Message Sent Successfully!",
+        description: "Thank you for your message. I'll get back to you soon!",
+      });
+
+      // Reset form
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      toast({
+        title: "Failed to Send Message",
+        description: "Sorry, there was an error sending your message. Please try again or contact me directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -129,10 +159,20 @@ const Contact = () => {
                   </div>
                   <Button 
                     type="submit" 
-                    className="w-full bg-gradient-primary hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+                    disabled={isLoading}
+                    className="w-full bg-gradient-primary hover:shadow-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                   >
-                    Send Message
-                    <Send className="ml-2 h-4 w-4" />
+                    {isLoading ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Send Message
+                        <Send className="ml-2 h-4 w-4" />
+                      </>
+                    )}
                   </Button>
                 </form>
               </CardContent>
