@@ -13,8 +13,6 @@ import {
   TrendingUp,
   Star
 } from "lucide-react";
-import skillsIllustration from "@/assets/skills-illustration.jpg";
-
 const Skills = () => {
   const [activeCategory, setActiveCategory] = useState(0);
 
@@ -22,7 +20,7 @@ const Skills = () => {
     {
       title: "Digital Marketing & Analytics",
       icon: BarChart3,
-      color: "bg-sage-500",
+      color: "bg-rose-500",
       skills: [
         { name: "Campaign Management", level: 85 },
         { name: "Data Analysis", level: 90 },
@@ -81,9 +79,9 @@ const Skills = () => {
   return (
     <section id="skills" className="py-20 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-sage-50 via-white to-sage-100"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-rose-50 via-white to-rose-100"></div>
       <div className="absolute top-20 left-16 w-40 h-40 bg-primary opacity-10 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-32 right-20 w-32 h-32 bg-sage-300 opacity-20 rounded-full animate-bounce"></div>
+      <div className="absolute bottom-32 right-20 w-32 h-32 bg-rose-300 opacity-20 rounded-full animate-bounce"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
@@ -103,14 +101,6 @@ const Skills = () => {
             </p>
           </div>
 
-          {/* Skills Image */}
-          <div className="mb-12">
-            <img 
-              src={skillsIllustration} 
-              alt="Skills and expertise illustration" 
-              className="w-full h-64 object-cover rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500 mx-auto"
-            />
-          </div>
 
           {/* Top Skills Highlight */}
           <div className="mb-16">
@@ -119,7 +109,7 @@ const Skills = () => {
             </h3>
             <div className="grid md:grid-cols-4 gap-6">
               {topSkills.map((skill, index) => (
-                <Card key={index} className="bg-white/80 backdrop-blur-md border-sage-200 hover:shadow-xl transition-all duration-500 hover:scale-110 group">
+                <Card key={index} className="bg-white/80 backdrop-blur-md border-rose-200 hover:shadow-xl transition-all duration-500 hover:scale-110 group">
                   <CardContent className="p-6 text-center">
                     <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-125 transition-transform duration-300">
                       <skill.icon className="h-8 w-8 text-primary-foreground" />
@@ -145,11 +135,11 @@ const Skills = () => {
                 <button
                   key={index}
                   onClick={() => setActiveCategory(index)}
-                  className={`flex items-center space-x-2 px-6 py-3 rounded-xl transition-all duration-300 ${
-                    activeCategory === index
-                      ? 'bg-gradient-primary text-primary-foreground shadow-lg scale-105'
-                      : 'bg-white/80 backdrop-blur-sm text-muted-foreground hover:bg-sage-100 border border-sage-200'
-                  }`}
+                    className={`flex items-center space-x-2 px-6 py-3 rounded-xl transition-all duration-300 ${
+                      activeCategory === index
+                        ? 'bg-gradient-primary text-primary-foreground shadow-lg scale-105'
+                        : 'bg-white/80 backdrop-blur-sm text-muted-foreground hover:bg-rose-100 border border-rose-200'
+                    }`}
                 >
                   <category.icon className="h-5 w-5" />
                   <span className="font-medium">{category.title}</span>
@@ -158,7 +148,7 @@ const Skills = () => {
             </div>
 
             {/* Active Category Skills */}
-            <Card className="bg-white/80 backdrop-blur-md border-sage-200 shadow-xl">
+            <Card className="bg-white/80 backdrop-blur-md border-rose-200 shadow-xl">
               <CardHeader>
                 <div className="flex items-center space-x-4">
                   <div className={`w-12 h-12 ${skillCategories[activeCategory].color} rounded-lg flex items-center justify-center`}>
@@ -186,7 +176,7 @@ const Skills = () => {
           </div>
 
           {/* Technologies */}
-          <Card className="bg-gradient-to-r from-sage-100 to-sage-200 border-sage-300 shadow-xl">
+          <Card className="bg-gradient-to-r from-rose-100 to-rose-200 border-rose-300 shadow-xl">
             <CardContent className="p-8">
               <div className="text-center mb-8">
                 <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
@@ -204,7 +194,7 @@ const Skills = () => {
                 {technologies.map((tech, index) => (
                   <Badge 
                     key={index}
-                    className="bg-white/80 text-sage-700 hover:bg-white hover:scale-110 transition-all duration-200 px-4 py-2 shadow-md"
+                    className="bg-white/80 text-rose-700 hover:bg-white hover:scale-110 transition-all duration-200 px-4 py-2 shadow-md"
                   >
                     {tech}
                   </Badge>

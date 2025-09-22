@@ -2,8 +2,6 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, Heart, Coffee, Lightbulb, Award, Users, Target } from "lucide-react";
-import aboutIllustration from "@/assets/about-illustration.jpg";
-
 const About = () => {
   const interests = [
     { icon: Lightbulb, title: "Innovation", description: "Always exploring new technologies and creative solutions", color: "bg-yellow-500" },
@@ -21,15 +19,15 @@ const About = () => {
   return (
     <section id="about" className="py-20 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-sage-50 via-white to-sage-100"></div>
-      <div className="absolute top-10 right-10 w-40 h-40 bg-sage-200 rounded-full opacity-20 animate-pulse"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-rose-50 via-white to-rose-100"></div>
+      <div className="absolute top-10 right-10 w-40 h-40 bg-rose-200 rounded-full opacity-20 animate-pulse"></div>
       <div className="absolute bottom-20 left-16 w-32 h-32 bg-primary opacity-10 rounded-full animate-bounce"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-sage-100 text-sage-700 border-sage-200 px-4 py-2">
+            <Badge className="mb-4 bg-rose-100 text-rose-700 border-rose-200 px-4 py-2">
               Get to know me
             </Badge>
             <h2 className="font-heading text-4xl md:text-6xl font-bold text-foreground mb-6">
@@ -46,15 +44,7 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
             {/* Bio Content */}
             <div className="space-y-8">
-              {/* About Image */}
-              <div className="lg:hidden mb-8">
-                <img 
-                  src={aboutIllustration} 
-                  alt="About me illustration" 
-                  className="w-full h-64 object-cover rounded-2xl shadow-xl"
-                />
-              </div>
-              <Card className="bg-white/70 backdrop-blur-md border-sage-200 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
+              <Card className="bg-white/70 backdrop-blur-md border-rose-200 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
                 <CardContent className="p-8">
                   <h3 className="font-heading text-2xl font-semibold text-foreground mb-6 flex items-center">
                     <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center mr-3">
@@ -104,14 +94,6 @@ const About = () => {
 
             {/* Interests & Achievements */}
             <div className="space-y-8">
-              {/* About Image - Desktop */}
-              <div className="hidden lg:block mb-8">
-                <img 
-                  src={aboutIllustration} 
-                  alt="About me illustration" 
-                  className="w-full h-80 object-cover rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500"
-                />
-              </div>
               {/* Interests */}
               <div>
                 <h3 className="font-heading text-2xl font-semibold text-foreground mb-6 flex items-center">
@@ -122,7 +104,7 @@ const About = () => {
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
                   {interests.map((interest, index) => (
-                    <Card key={index} className="group hover:shadow-xl transition-all duration-500 hover:scale-110 bg-white/80 backdrop-blur-sm border-sage-200">
+                    <Card key={index} className="group hover:shadow-xl transition-all duration-500 hover:scale-110 bg-white/80 backdrop-blur-sm border-rose-200">
                       <CardContent className="p-6 text-center">
                         <div className={`w-12 h-12 ${interest.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-125 transition-transform duration-300 shadow-lg`}>
                           <interest.icon className="h-6 w-6 text-white" />
@@ -149,10 +131,10 @@ const About = () => {
                 </h3>
                 <div className="space-y-4">
                   {achievements.map((achievement, index) => (
-                    <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:scale-105 bg-white/70 backdrop-blur-sm border-sage-200">
+                    <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:scale-105 bg-white/70 backdrop-blur-sm border-rose-200">
                       <CardContent className="p-4">
                         <div className="flex items-center space-x-4">
-                          <div className="w-12 h-12 bg-sage-100 rounded-lg flex items-center justify-center group-hover:bg-gradient-primary group-hover:text-primary-foreground transition-all duration-300">
+                          <div className="w-12 h-12 bg-rose-100 rounded-lg flex items-center justify-center group-hover:bg-gradient-primary group-hover:text-primary-foreground transition-all duration-300">
                             <achievement.icon className="h-6 w-6" />
                           </div>
                           <div>
@@ -169,7 +151,7 @@ const About = () => {
           </div>
 
           {/* Personal Quote/Philosophy */}
-          <Card className="bg-white/80 backdrop-blur-md border-sage-200 shadow-xl">
+          <Card className="bg-white/80 backdrop-blur-md border-rose-200 shadow-xl">
             <CardContent className="p-8 text-center">
               <div className="max-w-2xl mx-auto">
                 <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">

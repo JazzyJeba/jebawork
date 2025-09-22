@@ -14,9 +14,11 @@ import {
   Award,
   TrendingUp
 } from "lucide-react";
+import ProjectDetails from "./ProjectDetails";
 
 const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+  const [selectedProject, setSelectedProject] = useState<string | null>(null);
 
   const projects = [
     {
@@ -24,8 +26,8 @@ const Projects = () => {
       year: "2024",
       description: "AI-powered stress detection system for cats, combining innovative technology with comprehensive market analysis and prototype development.",
       icon: Brain,
-      color: "bg-sage-500",
-      gradient: "from-sage-500 to-sage-600",
+      color: "bg-rose-500",
+      gradient: "from-rose-500 to-rose-600",
       technologies: ["AI/ML", "Market Research", "Prototype Design", "Data Analysis"],
       features: [
         "AI-based stress detection algorithms",
@@ -35,7 +37,8 @@ const Projects = () => {
       ],
       type: "AI/ML Project",
       status: "Completed",
-      impact: "Academic Excellence"
+      impact: "Academic Excellence",
+      id: "sphynxsense"
     },
     {
       title: "E-Commerce Website",
@@ -53,7 +56,8 @@ const Projects = () => {
       ],
       type: "Web Development",
       status: "Completed",
-      impact: "Technical Skills"
+      impact: "Technical Skills",
+      id: "ecommerce"
     },
     {
       title: "Personal Portfolio Website",
@@ -71,7 +75,8 @@ const Projects = () => {
       ],
       type: "Personal Branding",
       status: "Live",
-      impact: "Professional Growth"
+      impact: "Professional Growth",
+      id: "portfolio"
     },
     {
       title: "Custom Audience Segment Management",
@@ -89,7 +94,8 @@ const Projects = () => {
       ],
       type: "Digital Marketing",
       status: "Professional",
-      impact: "Industry Experience"
+      impact: "Industry Experience",
+      id: "audience-management"
     }
   ];
 
@@ -102,9 +108,9 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-sage-50 via-white to-sage-100"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-rose-50 via-white to-rose-100"></div>
       <div className="absolute top-32 left-16 w-40 h-40 bg-primary opacity-10 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-40 right-20 w-48 h-48 bg-sage-200 opacity-20 rounded-full animate-bounce"></div>
+      <div className="absolute bottom-40 right-20 w-48 h-48 bg-rose-200 opacity-20 rounded-full animate-bounce"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
@@ -127,7 +133,7 @@ const Projects = () => {
           {/* Project Stats */}
           <div className="grid md:grid-cols-3 gap-6 mb-16">
             {stats.map((stat, index) => (
-              <Card key={index} className="bg-white/80 backdrop-blur-md border-sage-200 hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <Card key={index} className="bg-white/80 backdrop-blur-md border-rose-200 hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <CardContent className="p-6 text-center">
                   <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center mx-auto mb-4">
                     <stat.icon className="h-6 w-6 text-primary-foreground" />
@@ -144,7 +150,7 @@ const Projects = () => {
             {projects.map((project, index) => (
               <Card 
                 key={index} 
-                className="group hover:shadow-2xl transition-all duration-500 hover:scale-105 overflow-hidden bg-white/80 backdrop-blur-md border-sage-200"
+                className="group hover:shadow-2xl transition-all duration-500 hover:scale-105 overflow-hidden bg-white/80 backdrop-blur-md border-rose-200"
                 onMouseEnter={() => setHoveredProject(index)}
                 onMouseLeave={() => setHoveredProject(null)}
               >
@@ -200,7 +206,7 @@ const Projects = () => {
                       {project.technologies.map((tech, techIndex) => (
                         <Badge 
                           key={techIndex}
-                          className="text-xs bg-sage-100 text-sage-700 hover:bg-sage-200 transition-all duration-200 hover:scale-110"
+                          className="text-xs bg-rose-100 text-rose-700 hover:bg-rose-200 transition-all duration-200 hover:scale-110"
                         >
                           {tech}
                         </Badge>
@@ -209,9 +215,9 @@ const Projects = () => {
                   </div>
 
                   {/* Impact & Actions */}
-                  <div className="border-t border-sage-200 pt-4">
+                  <div className="border-t border-rose-200 pt-4">
                     <div className="flex items-center justify-between mb-4">
-                      <Badge variant="outline" className="bg-sage-50">
+                      <Badge variant="outline" className="bg-rose-50">
                         <Award className="h-3 w-3 mr-1" />
                         {project.impact}
                       </Badge>
@@ -224,6 +230,7 @@ const Projects = () => {
                       <Button 
                         variant="outline" 
                         size="sm"
+                        onClick={() => setSelectedProject(project.id)}
                         className="w-full group-hover:bg-gradient-primary group-hover:text-primary-foreground group-hover:border-transparent transition-all duration-300"
                       >
                         <ExternalLink className="h-4 w-4 mr-2" />
@@ -237,7 +244,7 @@ const Projects = () => {
           </div>
 
           {/* Call to Action */}
-          <Card className="bg-gradient-to-r from-sage-600 to-sage-700 text-white shadow-2xl">
+          <Card className="bg-gradient-to-r from-rose-600 to-rose-700 text-white shadow-2xl">
             <CardContent className="p-12 text-center relative overflow-hidden">
               <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-20 translate-x-20"></div>
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full translate-y-16 -translate-x-16"></div>
@@ -260,7 +267,7 @@ const Projects = () => {
                       element.scrollIntoView({ behavior: "smooth" });
                     }
                   }}
-                  className="bg-white text-sage-700 hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  className="bg-white text-rose-700 hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
                   Let's Work Together
                   <Star className="ml-2 h-5 w-5" />
@@ -268,6 +275,13 @@ const Projects = () => {
               </div>
             </CardContent>
           </Card>
+
+          {/* Project Details Modal */}
+          <ProjectDetails 
+            isOpen={selectedProject !== null}
+            onClose={() => setSelectedProject(null)}
+            projectId={selectedProject || ""}
+          />
         </div>
       </div>
     </section>

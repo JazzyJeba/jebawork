@@ -14,8 +14,6 @@ import {
   Star,
   CheckCircle
 } from "lucide-react";
-import servicesIllustration from "@/assets/services-illustration.jpg";
-
 const Services = () => {
   const services = [
     {
@@ -28,8 +26,8 @@ const Services = () => {
         "Custom Web Applications",
         "Performance Optimization"
       ],
-      color: "bg-sage-500",
-      gradient: "from-sage-500 to-sage-600"
+      color: "bg-rose-500",
+      gradient: "from-rose-500 to-rose-600"
     },
     {
       icon: Target,
@@ -89,9 +87,9 @@ const Services = () => {
   return (
     <section id="services" className="py-20 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-sage-25 to-sage-50"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-rose-25 to-rose-50"></div>
       <div className="absolute top-20 right-16 w-48 h-48 bg-primary opacity-5 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-40 left-10 w-40 h-40 bg-sage-200 opacity-20 rounded-full animate-bounce"></div>
+      <div className="absolute bottom-40 left-10 w-40 h-40 bg-rose-200 opacity-20 rounded-full animate-bounce"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
@@ -111,19 +109,11 @@ const Services = () => {
             </p>
           </div>
 
-          {/* Services Image */}
-          <div className="mb-12">
-            <img 
-              src={servicesIllustration} 
-              alt="Services illustration" 
-              className="w-full h-64 object-cover rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500 mx-auto"
-            />
-          </div>
 
           {/* Services Grid */}
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {services.map((service, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 hover:scale-105 border-2 hover:border-sage-200 bg-white/80 backdrop-blur-md overflow-hidden">
+              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 hover:scale-105 border-2 hover:border-rose-200 bg-white/80 backdrop-blur-md overflow-hidden">
                 <CardHeader className={`bg-gradient-to-r ${service.gradient} text-white relative`}>
                   <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full -translate-y-12 translate-x-12"></div>
                   <div className="relative z-10">
@@ -169,7 +159,7 @@ const Services = () => {
             </h3>
             <div className="grid md:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
-                <Card key={index} className="bg-white/80 backdrop-blur-md border-sage-200 hover:shadow-xl transition-all duration-300 hover:scale-105 text-center">
+                <Card key={index} className="bg-white/80 backdrop-blur-md border-rose-200 hover:shadow-xl transition-all duration-300 hover:scale-105 text-center">
                   <CardContent className="p-6">
                     <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center mx-auto mb-4">
                       <benefit.icon className="h-6 w-6 text-primary-foreground" />
@@ -183,7 +173,7 @@ const Services = () => {
           </div>
 
           {/* Call to Action */}
-          <Card className="bg-gradient-to-r from-sage-600 to-sage-700 text-white shadow-2xl">
+          <Card className="bg-gradient-to-r from-rose-600 to-rose-700 text-white shadow-2xl">
             <CardContent className="p-12 text-center relative overflow-hidden">
               <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-20 translate-x-20"></div>
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full translate-y-16 -translate-x-16"></div>
@@ -202,7 +192,7 @@ const Services = () => {
                   size="lg"
                   variant="secondary"
                   onClick={scrollToContact}
-                  className="bg-white text-sage-700 hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  className="bg-white text-rose-700 hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
                   Start Your Project
                   <ArrowRight className="ml-2 h-5 w-5" />

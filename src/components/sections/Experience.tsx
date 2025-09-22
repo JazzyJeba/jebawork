@@ -2,8 +2,6 @@ import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Building2, Calendar, MapPin, Target, TrendingUp, Users, BarChart3, Award } from "lucide-react";
-import experienceIllustration from "@/assets/experience-illustration.jpg";
-
 const Experience = () => {
   const responsibilities = [
     { text: "Managed audience segmentation for targeted digital marketing campaigns", icon: Target },
@@ -32,9 +30,9 @@ const Experience = () => {
   return (
     <section id="experience" className="py-20 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-sage-25 to-sage-50"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-rose-25 to-rose-50"></div>
       <div className="absolute top-16 right-20 w-48 h-48 bg-primary opacity-5 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-32 left-10 w-32 h-32 bg-sage-300 opacity-20 rounded-full animate-bounce"></div>
+      <div className="absolute bottom-32 left-10 w-32 h-32 bg-rose-300 opacity-20 rounded-full animate-bounce"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
@@ -54,20 +52,12 @@ const Experience = () => {
             </p>
           </div>
 
-          {/* Experience Image */}
-          <div className="mb-12">
-            <img 
-              src={experienceIllustration} 
-              alt="Professional experience illustration" 
-              className="w-full h-64 object-cover rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500 mx-auto"
-            />
-          </div>
 
           {/* Experience Timeline */}
           <div className="grid lg:grid-cols-3 gap-8 mb-12">
             {/* Main Experience Card */}
             <div className="lg:col-span-2">
-              <Card className="overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 bg-white/80 backdrop-blur-md border-sage-200">
+              <Card className="overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 bg-white/80 backdrop-blur-md border-rose-200">
                 <CardHeader className="bg-gradient-primary text-primary-foreground relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
                   <div className="relative z-10">
@@ -109,7 +99,7 @@ const Experience = () => {
                     </h3>
                     <div className="grid gap-4">
                       {responsibilities.map((responsibility, index) => (
-                        <Card key={index} className="bg-sage-50 border-sage-200 hover:shadow-md transition-all duration-300 hover:scale-105">
+                        <Card key={index} className="bg-rose-50 border-rose-200 hover:shadow-md transition-all duration-300 hover:scale-105">
                           <CardContent className="p-4">
                             <div className="flex items-start space-x-3">
                               <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0">
@@ -135,7 +125,7 @@ const Experience = () => {
                       {skills.map((skill, index) => (
                         <Badge 
                           key={index} 
-                          className="bg-sage-100 text-sage-700 hover:bg-sage-200 transition-all duration-200 hover:scale-110 px-4 py-2"
+                          className="bg-rose-100 text-rose-700 hover:bg-rose-200 transition-all duration-200 hover:scale-110 px-4 py-2"
                         >
                           {skill}
                         </Badge>
@@ -152,7 +142,7 @@ const Experience = () => {
                 Impact Highlights
               </h3>
               {highlights.map((highlight, index) => (
-                <Card key={index} className="bg-white/80 backdrop-blur-md border-sage-200 hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <Card key={index} className="bg-white/80 backdrop-blur-md border-rose-200 hover:shadow-xl transition-all duration-300 hover:scale-105">
                   <CardContent className="p-6 text-center">
                     <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center mx-auto mb-4">
                       <TrendingUp className="h-6 w-6 text-primary-foreground" />
@@ -167,7 +157,7 @@ const Experience = () => {
           </div>
 
           {/* Impact Statement */}
-          <Card className="bg-gradient-to-r from-sage-100 to-sage-200 border-sage-300 shadow-xl">
+          <Card className="bg-gradient-to-r from-rose-100 to-rose-200 border-rose-300 shadow-xl">
             <CardContent className="p-8">
               <div className="max-w-4xl mx-auto text-center">
                 <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
