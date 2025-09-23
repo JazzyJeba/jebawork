@@ -38,6 +38,7 @@ interface ProjectContent {
   details?: string;
   fileName?: string;
   fileSize?: string;
+  documentUrl?: string;
   videoUrl?: string;
   thumbnail?: string;
   images?: Array<{ url: string; alt?: string }>;
@@ -66,7 +67,10 @@ const ProjectDetails = ({ isOpen, onClose, projectId }: ProjectDetailsProps) => 
           description: "Comprehensive academic report covering methodology, market analysis, and technical implementation",
           icon: FileText,
           placeholder: "Upload your Word document report here",
-          details: "Group project report documenting the complete development process, market research findings, and technical implementation of the AI-powered stress detection system for cats."
+          details: "Group project report documenting the complete development process, market research findings, and technical implementation of the AI-powered stress detection system for cats.",
+          fileName: "SphynxSense Project Report",
+          fileSize: "Word Document",
+          documentUrl: "/assets/sphynxsense-report.docx"
         },
         {
           type: "document", 
@@ -74,12 +78,15 @@ const ProjectDetails = ({ isOpen, onClose, projectId }: ProjectDetailsProps) => 
           description: "Final presentation showcasing project outcomes and findings",
           icon: FileText,
           placeholder: "Upload your PDF presentation slides here",
-          details: "Final presentation slides delivered to stakeholders, showcasing project methodology, results, and business potential."
+          details: "Final presentation slides delivered to stakeholders, showcasing project methodology, results, and business potential.",
+          fileName: "SphynxSense Presentation",
+          fileSize: "PDF Document",
+          documentUrl: "/assets/sphynxsense-presentation.pdf"
         }
       ],
       details: {
-        teamSize: "4 members",
-        duration: "6 months",
+        teamSize: "5 members",
+        duration: "3 months",
         technologies: ["AI/ML", "Data Analysis", "Market Research", "Prototype Design"],
         achievements: [
           "Developed innovative stress detection algorithms",
@@ -90,7 +97,7 @@ const ProjectDetails = ({ isOpen, onClose, projectId }: ProjectDetailsProps) => 
       } as ProjectDetails
     },
     "ecommerce": {
-      title: "E-Commerce Smartphone Shop",
+      title: "Smartphone E-Commerce Website",
       year: "2024",
       type: "Web Development Project",
       status: "Completed",
@@ -99,7 +106,7 @@ const ProjectDetails = ({ isOpen, onClose, projectId }: ProjectDetailsProps) => 
         {
           type: "video",
           title: "Website Demo Video",
-          description: "Complete walkthrough of the e-commerce website functionality",
+          description: "Complete walkthrough of the smartphone e-commerce website functionality",
           icon: Video,
           placeholder: "Upload your demo video here",
           details: "Comprehensive demonstration of the smartphone e-commerce website including product browsing, cart functionality, checkout process, and admin features."
@@ -107,13 +114,16 @@ const ProjectDetails = ({ isOpen, onClose, projectId }: ProjectDetailsProps) => 
       ],
       details: {
         duration: "3 months",
-        technologies: ["HTML", "CSS", "JavaScript", "PHP", "Responsive Design"],
+        technologies: ["HTML", "CSS", "JavaScript", "PHP", "Master Page", "API", "Responsive Design"],
         features: [
-          "Product catalog with filtering and search",
-          "Shopping cart with add/remove functionality",
-          "User-friendly checkout simulation",
-          "Mobile-responsive design across all devices",
-          "Admin panel for product management"
+          "Comprehensive smartphone product catalog with detailed specifications",
+          "Advanced filtering by brand, price range, and features",
+          "Shopping cart with quantity management and real-time pricing",
+          "Secure user authentication and account management",
+          "Mobile-responsive design optimized for all devices",
+          "Admin panel for inventory and order management",
+          "Payment gateway integration simulation",
+          "Product comparison functionality"
         ]
       } as ProjectDetails
     },
@@ -146,46 +156,37 @@ const ProjectDetails = ({ isOpen, onClose, projectId }: ProjectDetailsProps) => 
       } as ProjectDetails
     },
     "audience-management": {
-      title: "Custom Audience Segment Management",
+      title: "Customer Audience Segment Management",
       year: "2025",
-      type: "Digital Marketing Project",
+      type: "Digital Marketing Internship",
       status: "Professional",
-      overview: "Streamlined data processes for digital advertising campaigns at CelcomDigi, optimizing audience targeting and improving campaign performance through automation.",
+      overview: "Customer Audience Segment Management – CelcomDigi (Internship, June–Sept 2025). Streamlined data processes for digital advertising campaigns, optimizing audience targeting and improving campaign performance through comprehensive data management and automation.",
       content: [
         {
           type: "images",
-          title: "Process Flow Diagrams",
-          description: "Visual representations of optimized audience segmentation workflows",
+          title: "Digital Platform Management",
+          description: "Screenshots of audience management across multiple digital advertising platforms",
           icon: ImageIcon,
-          placeholder: "Upload process diagrams here",
-          details: "Detailed workflow diagrams showing the before and after states of audience segmentation processes, highlighting automation improvements and efficiency gains."
-        },
-        {
-          type: "images",
-          title: "Performance Analytics",
-          description: "Before and after comparison of campaign optimization results",
-          icon: ImageIcon,
-          placeholder: "Upload analytics screenshots here",
-          details: "Data visualizations and performance metrics demonstrating the impact of process optimization on campaign effectiveness and ROI."
-        },
-        {
-          type: "images",
-          title: "System Architecture",
-          description: "Technical overview of the audience management system",
-          icon: ImageIcon,
-          placeholder: "Upload architecture diagrams here",
-          details: "Technical diagrams illustrating the system architecture, data flow, and integration points within the CelcomDigi advertising ecosystem."
+          placeholder: "Upload platform screenshots here",
+          details: "Working with Google Ads Transparency Center, TikTok Ads Manager, and other digital platforms for audience segment management and campaign optimization.",
+          images: [
+            { url: "/assets/audience-management-1.jpg", alt: "Google Ads Transparency Center interface" },
+            { url: "/assets/audience-management-2.jpg", alt: "TikTok Ads Manager audience dashboard" },
+            { url: "/assets/audience-management-3.jpg", alt: "Customer audience data spreadsheet" },
+            { url: "/assets/audience-management-4.jpg", alt: "Task management and workflow tracking" },
+            { url: "/assets/audience-management-5.jpg", alt: "Digital marketing analytics dashboard" }
+          ]
         }
       ],
       details: {
         company: "CelcomDigi Berhad",
-        duration: "3 months (Internship)",
-        technologies: ["Data Analysis", "Campaign Management", "Process Optimization"],
+        duration: "4 months (June-Sept 2025)",
+        technologies: ["Data Analysis", "Google Ads", "Meta Ads", "TikTok Ads", "DV360", "Excel", "Campaign Management"],
         achievements: [
-          "Automated audience segmentation processes",
-          "Improved campaign targeting accuracy by 15%",
-          "Reduced manual data processing time by 40%",
-          "Enhanced cross-team collaboration workflows"
+          "Data Preparation & Processing: Retrieved customer audience files from Digi Teams and Celcom MFTP systems, cleaned and formatted large datasets for digital advertising platforms (Google Ads, Meta, TikTok Ads, DV360)",
+          "Audience Upload & Maintenance: Uploaded segmented customer data into multiple digital platforms with strict monthly structuring (odd/even month folders), ensured successful population and monitored match rates",
+          "Performance Tracking & Optimisation: Monitored audience growth, match rates, and readiness for campaign targeting, identified issues and implemented corrective measures",
+          "Collaboration & Reporting: Supported the digital marketing team by providing clear updates on audience segment status, assisted in ensuring compliance with internal and external policies"
         ]
       } as ProjectDetails
     }
@@ -259,9 +260,11 @@ const ProjectDetails = ({ isOpen, onClose, projectId }: ProjectDetailsProps) => 
                                     <p className="text-xs text-muted-foreground">{item.fileSize || "Upload your document"}</p>
                                   </div>
                                 </div>
-                                <Button size="sm" variant="outline">
-                                  <ExternalLink className="h-3 w-3 mr-1" />
-                                  {item.fileName ? "View" : "Upload"}
+                                <Button size="sm" variant="outline" asChild>
+                                  <a href={item.documentUrl} target="_blank" rel="noopener noreferrer">
+                                    <ExternalLink className="h-3 w-3 mr-1" />
+                                    {item.fileName ? "View" : "Upload"}
+                                  </a>
                                 </Button>
                               </div>
                             </div>
