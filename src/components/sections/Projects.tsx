@@ -41,7 +41,7 @@ const Projects = () => {
       id: "sphynxsense"
     },
     {
-      title: "E-Commerce Website",
+      title: "Smartphone Website",
       year: "2024", 
       description: "Fully responsive smartphone shop featuring modern design, shopping cart functionality, and complete checkout simulation.",
       icon: ShoppingCart,
