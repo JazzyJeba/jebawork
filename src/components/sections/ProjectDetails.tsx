@@ -271,16 +271,20 @@ const ProjectDetails = ({ isOpen, onClose, projectId }: ProjectDetailsProps) => 
                             </div>
                           ) : item.type === "video" ? (
                             <div className="space-y-3">
-                              <div className="aspect-video bg-gradient-to-br from-rose-100 to-rose-200 rounded-lg border border-rose-200 flex items-center justify-center">
+                              <div className="aspect-video bg-gradient-to-br from-rose-100 to-rose-200 rounded-lg border border-rose-200 flex items-center justify-center relative">
                                 {item.videoUrl ? (
-                                  <video 
-                                    controls 
-                                    className="w-full h-full rounded-lg"
-                                    poster={item.thumbnail}
-                                  >
-                                    <source src={item.videoUrl} type="video/mp4" />
-                                    Your browser does not support the video tag.
-                                  </video>
+                                  <div className="relative w-full h-full flex items-center justify-center">
+                                    <div className="absolute inset-0 bg-gradient-to-br from-rose-600/80 to-rose-700/80 rounded-lg flex items-center justify-center">
+                                      <Button
+                                        onClick={() => window.open(item.videoUrl, '_blank')}
+                                        size="lg"
+                                        className="bg-white text-rose-700 hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                                      >
+                                        <Video className="mr-2 h-5 w-5" />
+                                        Watch Video
+                                      </Button>
+                                    </div>
+                                  </div>
                                 ) : (
                                   <div className="text-center">
                                     <Video className="h-12 w-12 text-rose-500 mx-auto mb-2" />
