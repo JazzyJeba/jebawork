@@ -74,14 +74,14 @@ const ProjectDetails = ({ isOpen, onClose, projectId }: ProjectDetailsProps) => 
         },
         {
           type: "document", 
-          title: "Presentation Slides",
+          title: "SphynxSense Presentation",
           description: "Final presentation showcasing project outcomes and findings",
           icon: FileText,
           placeholder: "Upload your PDF presentation slides here",
           details: "Final presentation slides delivered to stakeholders, showcasing project methodology, results, and business potential.",
           fileName: "SphynxSense Presentation",
           fileSize: "PDF Document",
-          documentUrl: "/assets/sphynxsense-presentation.pdf"
+          documentUrl: "https://drive.google.com/file/d/1yEI-BhBmbgYzvSUuRQCefPABUClyxadc/view?usp=sharing"
         }
       ],
       details: {
@@ -97,7 +97,7 @@ const ProjectDetails = ({ isOpen, onClose, projectId }: ProjectDetailsProps) => 
       } as ProjectDetails
     },
     "ecommerce": {
-      title: "Smartphone E-Commerce Website",
+      title: "Smartphone Website",
       year: "2024",
       type: "Web Development Project",
       status: "Completed",
