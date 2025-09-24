@@ -101,15 +101,16 @@ const ProjectDetails = ({ isOpen, onClose, projectId }: ProjectDetailsProps) => 
       year: "2024",
       type: "Web Development Project",
       status: "Completed",
-      overview: "A fully functional e-commerce website for smartphone sales featuring modern responsive design, complete shopping cart functionality, and simulated checkout process.",
+      overview: "A fully functional website for smartphone sales featuring modern responsive design, complete shopping cart functionality, and simulated checkout process.",
       content: [
         {
           type: "video",
-          title: "Website Demo Video",
-          description: "Complete walkthrough of the smartphone e-commerce website functionality",
+          title: "Smartphone Website Demo",
+          description: "Complete walkthrough of the smartphone website functionality",
           icon: Video,
           placeholder: "Upload your demo video here",
-          details: "Comprehensive demonstration of the smartphone e-commerce website including product browsing, cart functionality, checkout process, and admin features."
+          details: "Comprehensive demonstration of the smartphone website including product browsing, cart functionality, checkout process, and admin features.",
+          videoUrl: "https://screenapp.io/app/#/shared/b-iSQonaEb"
         }
       ],
       details: {
