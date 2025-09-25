@@ -41,18 +41,19 @@ const Projects = () => {
       id: "sphynxsense"
     },
     {
-      title: "Smartphone Website",
+      title: "Smartphone Recommendation Web App",
       year: "2024", 
-      description: "Fully responsive smartphone shop featuring modern design, shopping cart functionality, and complete checkout simulation.",
+      description: "Fully responsive smartphone recommendation platform built with dynamic PHP, JSON-driven data architecture, and Bootstrap-powered UI, simulating personalized user experiences, reviews, and smartphone browsing.",
       icon: ShoppingCart,
       color: "bg-primary",
       gradient: "from-primary to-blue-600",
-      technologies: ["HTML", "CSS", "JavaScript", "PHP", "Responsive Design"],
+      technologies: ["PHP", "JSON", "HTML & CSS", "JavaScript & jQuery", "Bootstrap 4"],
       features: [
-        "Product catalog with filtering",
-        "Add-to-cart functionality", 
-        "Checkout process simulation",
-        "Mobile-responsive design"
+        "Responsive design for mobile and desktop",
+        "Object-oriented PHP architecture", 
+        "Clean navigation and site structure",
+        "Master layout for consistent user experience",
+        "Progressive enhancement for better accessibility"
       ],
       type: "Web Development",
       status: "Completed",

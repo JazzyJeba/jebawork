@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowDown, Download, Mail, MapPin, Calendar, Star } from "lucide-react";
-import profileImage from "@/assets/jeba-profile-updated.jpg";
+import profileImage from "@/assets/jeba-profile-new.jpg";
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {

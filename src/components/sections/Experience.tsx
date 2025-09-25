@@ -64,8 +64,11 @@ const Experience = () => {
                     <div className="flex items-start justify-between mb-4">
                       <div>
                         <CardTitle className="text-2xl font-bold mb-2">
-                          Digital Marketing Intern
+                          Digital Media & Insights Intern
                         </CardTitle>
+                        <div className="text-primary-foreground/90 text-sm mb-2">
+                          Brands & Marketing Department
+                        </div>
                         <div className="space-y-2">
                           <div className="flex items-center space-x-2">
                             <Building2 className="h-4 w-4" />

@@ -97,34 +97,33 @@ const ProjectDetails = ({ isOpen, onClose, projectId }: ProjectDetailsProps) => 
       } as ProjectDetails
     },
     "ecommerce": {
-      title: "Smartphone Website",
+      title: "Smartphone Recommendation Web App",
       year: "2024",
       type: "Web Development Project",
       status: "Completed",
-      overview: "A fully functional website for smartphone sales featuring modern responsive design, complete shopping cart functionality, and simulated checkout process.",
+      overview: "This project is a smartphone recommendation site designed to simulate a real-world product showcase and user engagement platform. Built with a modular PHP backend and Bootstrap frontend, the application dynamically pulls content from JSON files to render smartphone listings, individual product details, user profiles, and reviews.",
       content: [
         {
           type: "video",
-          title: "Smartphone Website Demo",
-          description: "Complete walkthrough of the smartphone website functionality",
+          title: "Smartphone Recommendation Web App Demo",
+          description: "Complete walkthrough of the smartphone recommendation platform functionality",
           icon: Video,
           placeholder: "Upload your demo video here",
-          details: "Comprehensive demonstration of the smartphone website including product browsing, cart functionality, checkout process, and admin features.",
+          details: "A login simulation system retrieves predefined user details (username, name, favorite smartphone) and displays them across all pages after a successful login. A static review system on each phone's page shows multiple user comments and ratings, further enhancing the realism of the platform.",
           videoUrl: "https://screenapp.io/app/#/shared/xvy8JNjBTg"
         }
       ],
       details: {
         duration: "3 months",
-        technologies: ["HTML", "CSS", "JavaScript", "PHP", "Master Page", "API", "Responsive Design"],
+        technologies: ["PHP", "JSON", "HTML & CSS", "JavaScript & jQuery", "Bootstrap 4"],
         features: [
-          "Comprehensive smartphone product catalog with detailed specifications",
-          "Advanced filtering by brand, price range, and features",
-          "Shopping cart with quantity management and real-time pricing",
-          "Secure user authentication and account management",
-          "Mobile-responsive design optimized for all devices",
-          "Admin panel for inventory and order management",
-          "Payment gateway integration simulation",
-          "Product comparison functionality"
+          "Dynamic smartphone catalog with detailed specifications",
+          "Individual smartphone pages with full information and critique",
+          "User profile simulation with login/logout based on JSON-stored users",
+          "Static review system with ratings and comments per smartphone",
+          "Query string routing for dynamic page generation",
+          "Mobile-first, responsive design using Bootstrap",
+          "Modular site structure with shared master layout and global navigation"
         ]
       } as ProjectDetails
     },

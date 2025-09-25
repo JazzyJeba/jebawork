@@ -59,7 +59,7 @@ const About = () => {
                       My journey combines the analytical rigor of technology with the creative flair of business innovation.
                     </p>
                     <p>
-                      What drives me is the intersection of creativity and problem-solving – finding elegant 
+                      What drives me is the intersection of creativity and problem-solving, finding elegant 
                       solutions that not only work technically but also create meaningful impact for businesses and users alike.
                     </p>
                   </div>
@@ -78,10 +78,10 @@ const About = () => {
                         BSc (Hons) E-Business & Technology Management
                       </h4>
                       <p className="text-primary-foreground/90 font-medium">
-                        Liverpool John Moores University, UK
+                        YPC International College, Malaysia
                       </p>
                       <p className="text-primary-foreground/80 text-sm">
-                        In collaboration with YPC International College, Malaysia
+                        In collaboration with Liverpool John Moores University, UK
                       </p>
                       <Badge className="bg-white/20 text-white border-white/30 mt-2">
                         Expected Graduation: 2026
