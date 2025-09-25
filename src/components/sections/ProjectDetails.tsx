@@ -110,7 +110,7 @@ const ProjectDetails = ({ isOpen, onClose, projectId }: ProjectDetailsProps) => 
           icon: Video,
           placeholder: "Upload your demo video here",
           details: "Comprehensive demonstration of the smartphone website including product browsing, cart functionality, checkout process, and admin features.",
-          videoUrl: "https://screenapp.io/app/#/shared/b-iSQonaEb"
+          videoUrl: "https://screenapp.io/app/#/shared/xvy8JNjBTg"
         }
       ],
       details: {
