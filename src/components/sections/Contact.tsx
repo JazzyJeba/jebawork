@@ -13,7 +13,8 @@ import {
   Send,
   MapPin,
   MessageCircle,
-  Loader2
+  Loader2,
+  Download
 } from "lucide-react";
 
 const Contact = () => {
@@ -225,9 +226,26 @@ const Contact = () => {
                         Based in Malaysia, available for local and remote opportunities.
                       </p>
                       <p className="text-sm text-sage-600">
-                        I'm currently a student and available for internships, part-time projects, 
+                        I'm currently a student and available for part-time projects, 
                         and freelance opportunities. Let's discuss how I can contribute to your team or project!
                       </p>
+                      <div className="mt-4">
+                        <Button 
+                          asChild 
+                          variant="outline" 
+                          size="sm"
+                          className="bg-primary/10 hover:bg-primary/20 border-primary/20 text-primary"
+                        >
+                          <a 
+                            href="/assets/jeba-resume.pdf" 
+                            download="Jeba_Resume.pdf"
+                            className="inline-flex items-center gap-2"
+                          >
+                            <Download className="h-4 w-4" />
+                            Download Resume
+                          </a>
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </CardContent>

@@ -97,7 +97,7 @@ const ProjectDetails = ({ isOpen, onClose, projectId }: ProjectDetailsProps) => 
       } as ProjectDetails
     },
     "ecommerce": {
-      title: "Smartphone Recommendation Web App",
+      title: "Smartphone Web App",
       year: "2024",
       type: "Web Development Project",
       status: "Completed",
